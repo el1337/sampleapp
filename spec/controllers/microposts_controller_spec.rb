@@ -15,7 +15,7 @@ describe MicropostsController do
       response.should redirect_to(signin_path)
     end
   end
-describe "POST 'create'" do
+  describe "POST 'create'" do
 
     before(:each) do
       @user = test_sign_in(Factory(:user))
@@ -62,7 +62,7 @@ describe "POST 'create'" do
       end
     end
   end
-describe "DELETE 'destroy'" do
+ describe "DELETE 'destroy'" do
 
     describe "for an unauthorized user" do
 

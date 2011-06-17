@@ -2,7 +2,7 @@ class MicropostsController < ApplicationController
   before_filter :authenticate, :only => [:create, :destroy]
   before_filter :authorized_user, :only => :destroy
 
-  def create
+def create
     @micropost = current_user.microposts.build(params[:micropost])
     if @micropost.save
       flash[:success] = "Micropost created!"
@@ -13,7 +13,7 @@ class MicropostsController < ApplicationController
     end
   end
 
-   def destroy
+def destroy
     @micropost.destroy
     redirect_back_or root_path
   end

@@ -7,13 +7,16 @@ class PagesController < ApplicationController
       @feed_items = current_user.feed.paginate(:page => params[:page])
     end
   end
-  def help
-    @title = "Help"
-  end
+
   def contact
-    @title = "Contact"
+      @title = "Contact"
   end
+
   def about
-    @title = "About"
+      @title = "About"
+  end
+
+  def help
+      @title = "Help"
   end
 end
